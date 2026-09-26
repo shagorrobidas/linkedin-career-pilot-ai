@@ -170,49 +170,41 @@ Recommended backend structure:
 ```text
 backend/
 │
+├── api/
+│   └── urls.py
+│
 ├── core/
 │   ├── __init__.py
-│   ├── settings/
-│   │   ├── __init__.py
-│   │   ├── base.py
-│   │   ├── development.py
-│   │   └── production.py
-│   │
+│   ├── settings.py
 │   ├── urls.py
-│   ├── celery.py
 │   ├── asgi.py
 │   └── wsgi.py
 │
-├── apps/
-│   │
-│   ├── accounts/
-│   ├── tenants/
-│   ├── profiles/
-│   ├── jobs/
-│   ├── applications/
-│   ├── content/
-│   ├── github/
-│   ├── agents/
-│   ├── ai/
-│   ├── subscriptions/
-│   ├── billing/
-│   ├── notifications/
-│   └── analytics/
+├── accounts/
+│   ├── api/
+│   │   ├── serializers/
+│   │   ├── views/
+│   │   └── urls.py
+│   ├── models.py
+│   ├── admin.py
+│   ├── views.py
+│   ├── tests.py
+│   └── apps.py
 │
-├── common/
-│   ├── exceptions/
-│   ├── permissions/
-│   ├── pagination/
-│   ├── middleware/
-│   ├── validators/
-│   ├── utils/
-│   └── constants/
+├── tenants/
+├── profiles/
+├── jobs/
+├── applications/
+├── content/
+├── github/
+├── agents/
+├── subscriptions/
+├── billing/
+├── notifications/
+├── analytics/
 │
-├── tests/
-│
-├── manage.py
-├── requirements.txt
-└── .env
+├── .gitignore
+└── manage.py
 ```
 
 ---
