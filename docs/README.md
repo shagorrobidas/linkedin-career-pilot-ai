@@ -534,31 +534,33 @@ Border        #E2E8F0
 linkedin-career-pilot-ai/
 │
 ├── backend/
-│   │
+│   ├── api/
+│   │   └── urls.py
 │   ├── core/
-│   │   ├── settings/
+│   │   ├── settings.py
 │   │   ├── urls.py
-│   │   ├── celery.py
+│   │   ├── asgi.py
 │   │   └── wsgi.py
-│   │
-│   ├── apps/
-│   │   ├── accounts/
-│   │   ├── tenants/
-│   │   ├── profiles/
-│   │   ├── jobs/
-│   │   ├── applications/
-│   │   ├── content/
-│   │   ├── github/
-│   │   ├── agents/
-│   │   ├── ai/
-│   │   ├── subscriptions/
-│   │   ├── billing/
-│   │   ├── notifications/
-│   │   └── analytics/
-│   │
-│   ├── tests/
-│   ├── manage.py
-│   └── requirements.txt
+│   ├── accounts/
+│   │   ├── api/
+│   │   │   ├── serializers/
+│   │   │   ├── views/
+│   │   │   └── urls.py
+│   │   ├── models.py
+│   │   └── admin.py
+│   ├── tenants/
+│   ├── profiles/
+│   ├── jobs/
+│   ├── applications/
+│   ├── content/
+│   ├── github/
+│   ├── agents/
+│   ├── subscriptions/
+│   ├── billing/
+│   ├── notifications/
+│   ├── analytics/
+│   ├── .gitignore
+│   └── manage.py
 │
 ├── frontend/
 │   ├── app/
